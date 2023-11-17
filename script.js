@@ -103,7 +103,9 @@ document.querySelector('.generate-button').addEventListener('click', (event) => 
 
     document.querySelector(".generated-doc").value = generatedDoc;
 
-    console.log(generatedDoc)
+    navigator.clipboard.writeText(generatedDoc)
+    .then(() =>console.log('Document copied to clipboard'))
+    .then(() => "Erro ao copiar");
 })
 
 
