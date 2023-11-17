@@ -1,5 +1,3 @@
 # cpf-cnpj-generator-extension
 ## Para instalar -> 
-### 1. Baixe o arquivo "cpf-generator-extensio.crx"
-### 2. Abra o o arquivo com o Chrome
-### 3. Só clicar em instalar
+### Veja o seguinte vídeo para instalação: https://drive.google.com/file/d/1nWhLWkR92gqLSCyKfYxTyaKCAvX3B7DB/view?usp=drive_link
