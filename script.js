@@ -31,7 +31,7 @@ function generateDocument(initialDigits, pontuacao) {
 }
 
 function randomDocumentNumber(digits) {
-    return digits == 9 ? Math.floor(Math.random() * (10 ** digits)) : (Math.floor(Math.random() * (10 ** 8)) * 10000 + 1)
+    return digits == 9 ? Math.floor(Math.random() * (10 ** digits)) : (Math.floor(Math.random() * (10 ** 8))) * 10000 + 1
 }
 
 function getVerificationDigit(documentString) {
@@ -49,10 +49,10 @@ function getVerificationDigit(documentString) {
             break;
     }
 
-
     let randomNumberArrayWeighted = documentString.split('').map((digit, index) => Number(digit) * (mask[index]));
     let digitSumMod11 = randomNumberArrayWeighted.reduce((acc, curr) => acc + curr, 0) % 11
-    return digitSumMod11 < 2 ? '0' : (11 - digitSumMod11).toString()
+    let teste = digitSumMod11 < 2 ? '0' : (11 - digitSumMod11).toString()
+    return teste
 }
 
 
@@ -71,14 +71,6 @@ function addNonNumberCharacters(initialDigits, documentString) {
         documentArray.splice(-2, 0, "-")
     }
     return documentArray.join('')
-}
-
-function handleButtonClick() {
-    // e.preventDefault();
-    const type = document.querySelectorAll("input[name=type_gen]:checked")[0].value;
-    const ponc = document.querySelectorAll("input[name=ponctuation]:checked")[0].value;
-
-    console.log(type, ponc)
 }
 
 document.querySelector('.generate-button').addEventListener('click', (event) => {
@@ -104,7 +96,7 @@ document.querySelector('.generate-button').addEventListener('click', (event) => 
     document.querySelector(".generated-doc").value = generatedDoc;
 
     navigator.clipboard.writeText(generatedDoc)
-    .then(() =>console.log('Document copied to clipboard'))
+    .then(() => console.log('Document copied to clipboard'))
     .then(() => "Erro ao copiar");
 })
 

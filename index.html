@@ -10,17 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
-        <h2>
-            Gerador de CPF/CNPJ
-        </h2>
+        <header>
+            <h2>
+                Gerador de CPF/CNPJ
+            </h2>
+        </header>
         <form>
             <label>
                 <p class="generated-title">CPF/CNPJ</p>
@@ -31,12 +35,12 @@
                     <legend>Selecione o tipo:</legend>
 
                     <div class="radio">
-                        <input type="radio" id="cpf" name="type_gen" value="cpf" checked />
+                        <input class="radio-button" type="radio" id="cpf" name="type_gen" value="cpf" checked />
                         <label for="cpf">CPF</label>
                     </div>
 
                     <div class="radio">
-                        <input type="radio" id="cnpj" name="type_gen" value="cnpj" />
+                        <input class="radio-button" type="radio" id="cnpj" name="type_gen" value="cnpj" />
                         <label for="cnpj">CNPJ</label>
                     </div>
                 </fieldset>
@@ -44,18 +48,23 @@
                     <legend>Selecione com ou sem pontuação:</legend>
 
                     <div class="radio">
-                        <input type="radio" id="ponctuation" name="ponctuation" value="ponctuation" checked/>
+                        <input class="radio-button" type="radio" id="ponctuation" name="ponctuation" value="ponctuation"
+                            checked />
                         <label for="ponctuation">Com pontuação</label>
                     </div>
 
                     <div class="radio">
-                        <input type="radio" id="non-ponctuation" name="ponctuation" value="non-ponctuation" />
+                        <input class="radio-button" type="radio" id="non-ponctuation" name="ponctuation"
+                            value="non-ponctuation" />
                         <label for="non-ponctuation">Sem pontuação</label>
                     </div>
                 </fieldset>
             </div>
             <input type="submit" value="Gerar" class="generate-button">
         </form>
+        <footer>
+            media.monks &copy; 2023
+        </footer>
     </div>
 </body>
 <script src="script.js"></script>
