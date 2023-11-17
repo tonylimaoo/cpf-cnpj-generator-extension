@@ -1,0 +1,11 @@
+{
+    "name": "Gerador de CPF/CNPJ - Media.Monks",
+    "version": "1.0.0",
+    "description": "Para gerar CPFs e CNPJs",
+    "manifest_version": 3,
+    "author": "Tony Lima",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Gerador de CPF/CNPJ - Media.Monks"
+    }
+}
