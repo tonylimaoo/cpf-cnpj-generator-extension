@@ -52,7 +52,7 @@ function getVerificationDigit(documentString) {
 
     let randomNumberArrayWeighted = documentString.split('').map((digit, index) => Number(digit) * (mask[index]));
     let digitSumMod11 = randomNumberArrayWeighted.reduce((acc, curr) => acc + curr, 0) % 11
-    return digitSumMod11 < 2 ? 0 : (11 - digitSumMod11)
+    return digitSumMod11 < 2 ? '0' : (11 - digitSumMod11).toString()
 }
 
 
