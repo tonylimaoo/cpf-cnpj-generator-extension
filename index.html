@@ -31,36 +31,13 @@
                 <input type="text" disabled name="gerado" class="generated-doc">
             </label>
             <div class="fields">
-                <fieldset>
-                    <legend>Selecione o tipo:</legend>
-
-                    <div class="radio">
-                        <input class="radio-button" type="radio" id="cpf" name="type_gen" value="cpf" checked />
-                        <label for="cpf">CPF</label>
-                    </div>
-
-                    <div class="radio">
-                        <input class="radio-button" type="radio" id="cnpj" name="type_gen" value="cnpj" />
-                        <label for="cnpj">CNPJ</label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Selecione com ou sem pontuação:</legend>
-
-                    <div class="radio">
-                        <input class="radio-button" type="radio" id="ponctuation" name="ponctuation" value="ponctuation"
-                            checked />
-                        <label for="ponctuation">Com pontuação</label>
-                    </div>
-
-                    <div class="radio">
-                        <input class="radio-button" type="radio" id="non-ponctuation" name="ponctuation"
-                            value="non-ponctuation" />
-                        <label for="non-ponctuation">Sem pontuação</label>
-                    </div>
-                </fieldset>
+                <button class="generate-button" id="cpf">CPF</button>
+                <button class="generate-button" id="cnpj">CNPJ</button>
             </div>
-            <input type="submit" value="Gerar" class="generate-button">
+            <label class="ponctuation">
+                <p>Adicionar pontuação</p>
+                <input type="checkbox" value="Gerar">
+            </label>
         </form>
         <footer>
             media.monks &copy; 2023

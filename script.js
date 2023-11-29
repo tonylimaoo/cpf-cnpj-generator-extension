@@ -77,28 +77,18 @@ function addNonNumberCharacters(initialDigits, documentString) {
     return documentArray.join('')
 }
 
-function handleButtonClick() {
-    // e.preventDefault();
-    const type = document.querySelectorAll("input[name=type_gen]:checked")[0].value;
-    const ponc = document.querySelectorAll("input[name=ponctuation]:checked")[0].value;
+document.querySelectorAll('.generate-button').forEach((e) => e.addEventListener('click', (event) => {
+    event.preventDefault();
 
-    console.log(type, ponc)
-}
-
-document.querySelector('.generate-button').addEventListener('click', (event) => {
-    event.preventDefault()
-    const type = document.querySelectorAll("input[name=type_gen]:checked")[0].value;
-    const ponc = document.querySelectorAll("input[name=ponctuation]:checked")[0].value;
-    let generatedDoc;
-
-    if (type === "cpf") {
-        if (ponc === "ponctuation") {
+    const ponc = document.querySelector('.ponctuation input:checked');
+    if (event.target.id === 'cpf') {
+        if (ponc !== null) {
             generatedDoc = generateDoc.cpf();
         } else {
             generatedDoc = generateDoc.cpf(false);
         }
     } else {
-        if (ponc === "ponctuation") {
+        if (ponc !== null) {
             generatedDoc = generateDoc.cnpj();
         } else {
             generatedDoc = generateDoc.cnpj(false);
@@ -110,4 +100,4 @@ document.querySelector('.generate-button').addEventListener('click', (event) => 
     navigator.clipboard.writeText(generatedDoc)
         .then(() => console.log('Document copied to clipboard'))
         .then(() => "Erro ao copiar");
-})
+}))
