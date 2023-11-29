@@ -77,14 +77,6 @@ function addNonNumberCharacters(initialDigits, documentString) {
     return documentArray.join('')
 }
 
-function handleButtonClick() {
-    // e.preventDefault();
-    const type = document.querySelectorAll("input[name=type_gen]:checked")[0].value;
-    const ponc = document.querySelectorAll("input[name=ponctuation]:checked")[0].value;
-
-    console.log(type, ponc)
-}
-
 document.querySelectorAll('.generate-button').forEach((e) => e.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -96,7 +88,6 @@ document.querySelectorAll('.generate-button').forEach((e) => e.addEventListener(
             generatedDoc = generateDoc.cpf(false);
         }
     } else {
-        console.log('cnpj')
         if (ponc !== null) {
             generatedDoc = generateDoc.cnpj();
         } else {
